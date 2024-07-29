@@ -37,6 +37,12 @@ const questions = [
     },
     {
         type: 'checkbox',
+        message: colors.brightMagenta('What languages were used to create this project?'),
+        name: 'language',
+        choices: ['HTML', 'CSS', 'Javascript','C++','Python']
+    },
+    {
+        type: 'checkbox',
         message: colors.brightMagenta('Please choose a license for you application.'),
         name: 'license',
         choices: ['None', 'MIT License', 'Apache License 2.0','GNU General Public License v3.0','BSD 2-clause "Simplified" license','BSD 3-clause "New" or "Revised" license']
@@ -56,6 +62,27 @@ const questions = [
 
 
 // TODO: Create a function to write README file
+inquirer
+    .prompt(questions)
+    .then((answers) => {
+        console.log(answers);
+        const readmeContent = `
+        # ${answers.title}\n\n
+        `;
+        fs.writeFile('README.md', readmeContent, (err) => {
+            if (err) throw err;
+            console.log('README.md created successfully!');
+          });
+        })
+        .catch((error) => {
+        if (error.isTtyError) {
+            // Prompt couldn't be rendered in the current environment
+        } else {
+            // Something else went wrong
+        }
+    });
+
+
 function writeToFile(fileName, data) {}
 
 // // TODO: Create a function to initialize app
