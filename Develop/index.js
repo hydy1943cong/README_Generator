@@ -66,13 +66,7 @@ inquirer
     .prompt(questions)
     .then((answers) => {
         console.log(answers);
-        const readmeContent = `
-        # ${answers.title}\n\n
-        `;
-        fs.writeFile('README.md', readmeContent, (err) => {
-            if (err) throw err;
-            console.log('README.md created successfully!');
-          });
+        writeToFile(answers);
         })
         .catch((error) => {
         if (error.isTtyError) {
@@ -83,7 +77,34 @@ inquirer
     });
 
 
-function writeToFile(fileName, data) {}
+function writeToFile(answers) {
+    const readmeContent = `
+  # Title: ${answers.title}\n\n
+  ## Table of Content
+  ## Description
+  ${answers.description}\n\n
+  ## Installation
+  ${answers.installation}\n\n
+  ## Usage
+  ${answers.usage}\n\n
+  ## Contributing
+  ${answers.contributing}\n\n
+  ## Tests
+  ${answers.tests}\n\n
+  ## Languages
+  ${answers.language.join(', ')} \n\n
+  ## License
+  ${answers.license.join(', ')} \n\n
+  ## Questions
+  ### Check my github: ${answers.github}\n\n
+  ### Email me with your questions: ${answers.email}\n\n
+    `;
+    
+    fs.writeFile('README.md', readmeContent, (err) => {
+        if (err) throw err;
+        console.log('README.md created successfully!');
+      });
+}
 
 // // TODO: Create a function to initialize app
 // function init() {}
