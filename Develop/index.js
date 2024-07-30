@@ -75,15 +75,14 @@ inquirer
     .then((answers) => {
         console.log(answers);
         writeToFile(answers);
-        })
-        .catch((error) => {
+    })
+    .catch((error) => {
         if (error.isTtyError) {
             // Prompt couldn't be rendered in the current environment
         } else {
             // Something else went wrong
         }
     });
-
 
 function writeToFile(answers) {
     const licenseBadge = licenseBadges[answers.license] || "";
@@ -92,11 +91,11 @@ function writeToFile(answers) {
         : "This application does not have a license.";
 
     const readmeContent = `
-  # Title: ${answers.title}\n\n
-  ${licenseBadge}\n
-  ${licenseNotice}
-  ## Table of Content
+# ${answers.title}
 
+${licenseBadge}
+
+## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -106,29 +105,36 @@ function writeToFile(answers) {
 - [License](#license)
 - [Questions](#questions)
 
-  ## Description
-  ${answers.description}\n\n
-  ## Installation
-  ${answers.installation}\n\n
-  ## Usage
-  ${answers.usage}\n\n
-  ## Contributing
-  ${answers.contributing}\n\n
-  ## Tests
-  ${answers.tests}\n\n
-  ## Languages
-  ${answers.language.join(', ')} \n\n
-  ## License
-  ${answers.license.join(', ')} \n\n
-  ## Questions
-  ### Check my github: [${answers.github}] (https://github.com/${answers.github})\n\n
-  ### Email me with your questions: ${answers.email}\n\n
+## Description
+${answers.description}
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+## Languages
+${answers.language.join(', ')}
+
+## License
+${licenseNotice}
+
+## Questions
+- Check my GitHub: [${answers.github}](https://github.com/${answers.github})
+- Email me with your questions: ${answers.email}
     `;
-    
+
     fs.writeFile('README.md', readmeContent, (err) => {
         if (err) throw err;
         console.log('README.md created successfully!');
-      });
+    });
 }
 
 // // TODO: Create a function to initialize app
