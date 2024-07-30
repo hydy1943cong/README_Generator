@@ -1,7 +1,9 @@
 
-  # Title: readme generator
+  # Title: ss
 
 
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  This application is covered under the MIT License.
   ## Table of Content
 
 - [Description](#description)
@@ -14,23 +16,23 @@
 - [Questions](#questions)
 
   ## Description
-  this is my first app
+  dd
 
 
   ## Installation
-  no
+  dd
 
 
   ## Usage
-  no
+  dd
 
 
   ## Contributing
-  cong
+  dd
 
 
   ## Tests
-  no
+  dd
 
 
   ## Languages
@@ -38,14 +40,14 @@
 
 
   ## License
-   
+  MIT License 
 
 
   ## Questions
-  ### Check my github: hydy1943
+  ### Check my github: dd
 
 
-  ### Email me with your questions: wangcong525@hotmail.com
+  ### Email me with your questions: dd
 
 
     
