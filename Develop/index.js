@@ -81,6 +81,16 @@ function writeToFile(answers) {
     const readmeContent = `
   # Title: ${answers.title}\n\n
   ## Table of Content
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Languages](#languages)
+- [License](#license)
+- [Questions](#questions)
+
   ## Description
   ${answers.description}\n\n
   ## Installation
