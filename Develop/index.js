@@ -50,7 +50,7 @@ const questions = [
         choices: ['HTML', 'CSS', 'Javascript','C++','Python']
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: colors.brightMagenta('Please choose a license for you application.'),
         name: 'license',
         choices: ['None', 'MIT License', 'Apache License 2.0','GNU General Public License v3.0','BSD 2-clause "Simplified" license','BSD 3-clause "New" or "Revised" license']
@@ -121,7 +121,7 @@ function writeToFile(answers) {
   ## License
   ${answers.license.join(', ')} \n\n
   ## Questions
-  ### Check my github: ${answers.github}\n\n
+  ### Check my github: [${answers.github}] (https://github.com/${answers.github})\n\n
   ### Email me with your questions: ${answers.email}\n\n
     `;
     
