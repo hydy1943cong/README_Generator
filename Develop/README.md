@@ -1,5 +1,5 @@
 
-# README generator
+# README file generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -14,19 +14,19 @@
 - [Questions](#questions)
 
 ## Description
-this is a read me generator
+This is an app that can help you generate README files automatically
 
 ## Installation
-na
+NA
 
 ## Usage
-na
+NA
 
 ## Contributing
 Cong Wang
 
 ## Tests
-na
+NA
 
 ## Languages
 Javascript
