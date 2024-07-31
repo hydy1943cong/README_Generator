@@ -1,5 +1,5 @@
 
-# i don't know
+# README generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -14,27 +14,27 @@
 - [Questions](#questions)
 
 ## Description
-aa
+this is a read me generator
 
 ## Installation
-ss
+na
 
 ## Usage
-no
+na
 
 ## Contributing
-congwang
+Cong Wang
 
 ## Tests
-no
+na
 
 ## Languages
-HTML, CSS, Javascript
+Javascript
 
 ## License
 This application is covered under the MIT License.
 
 ## Questions
 - Check my GitHub: [hydy1943cong](https://github.com/hydy1943cong)
-- Email me with your questions: wang@hotmail.com
+- Email me with your questions: wangcong525@hotmail.com
     

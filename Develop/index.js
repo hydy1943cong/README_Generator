@@ -70,19 +70,6 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-inquirer
-    .prompt(questions)
-    .then((answers) => {
-        console.log(answers);
-        writeToFile(answers);
-    })
-    .catch((error) => {
-        if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
-        } else {
-            // Something else went wrong
-        }
-    });
 
 function writeToFile(answers) {
     const licenseBadge = licenseBadges[answers.license] || "";
@@ -137,8 +124,23 @@ ${licenseNotice}
     });
 }
 
-// // TODO: Create a function to initialize app
-// function init() {}
+// TODO: Create a function to initialize app
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((answers) => {
+        console.log(answers);
+        writeToFile(answers);
+    })
+    .catch((error) => {
+        if (error.isTtyError) {
+            // Prompt couldn't be rendered in the current environment
+        } else {
+            // Something else went wrong
+        }
+    });
 
-// // Function call to initialize app
-// init();
+}
+
+// Function call to initialize app
+init();
